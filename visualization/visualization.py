@@ -65,10 +65,9 @@ def generate_plots(history, best_solution, fit_hist, operations, begin_range, en
     # Fitness over iterations plot
     plt.figure(figsize=(10, 6))
     iterations = list(range(1, len(history) + 1))
-    fitness_values = [point[1] for point in history]
 
-    plt.plot(iterations, fitness_values, 'b-', linewidth=2)
-    plt.scatter(iterations, fitness_values, c='blue', s=30)
+    plt.plot(iterations, fit_hist, 'b-', linewidth=2)
+    plt.scatter(iterations, fit_hist, c='blue', s=30)
 
     plt.xlabel("Iteracja")
     plt.ylabel("Wartość fitness")

@@ -6,7 +6,7 @@ def best_selection(population, maximize):
     else:
         sorted_population = sorted(population, key=lambda x: x.fitness)
 
-    return sorted_population[:3]
+    return sorted_population[:2]
 
 def tournament_selection(population, tournament_size, maximize):
     tournament = random.sample(population, tournament_size)
